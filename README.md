@@ -2,6 +2,8 @@
 
 > Plataforma educativa en español para aprender trading desde cero: ruta de aprendizaje de 7 niveles, gráficos explicativos, diccionario, blog y simulador de riesgo. **Sin promesas de rentabilidad y sin datos de mercado reales.**
 
+**🌐 Sitio en vivo:** https://asllyzuniga.github.io/LearnTrading/ · Desplegado automáticamente con GitHub Actions en GitHub Pages
+
 ![React Router](https://img.shields.io/badge/React_Router-7-1a1a2e?style=flat-square&logo=reactrouter&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?style=flat-square&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-8-646cff?style=flat-square&logo=vite&logoColor=white)
@@ -77,7 +79,23 @@ npm run dev        # servidor de desarrollo (http://localhost:5173)
 | `npm run lint` | ESLint con `--max-warnings 0` |
 | `npm test` | Vitest (31 pruebas: contenido, indicadores, riesgo) |
 | `npm run seo:generate` | Regenera `sitemap.xml` y `robots.txt` |
+| `npm run prepare:pages` | Ajusta la salida del build para GitHub Pages (404.html, .nojekyll) |
 | `npx tsx scripts/check-content.ts` | Detecta texto corrupto/mojibake en el contenido |
+
+## Despliegue
+
+Cada push a `main` ejecuta el workflow `.github/workflows/deploy.yml`:
+
+1. **Quality gate**: `typecheck` + `lint` + `31 tests` + validación de contenido.
+2. **Build** con `BASE_PATH=/LearnTrading/` (subdirectorio de GitHub Pages).
+3. **Publicación** automática en <https://asllyzuniga.github.io/LearnTrading/> con `actions/deploy-pages`.
+
+Para construir en local como en producción:
+
+```bash
+$env:BASE_PATH = "/LearnTrading/"   # Windows (PowerShell)
+npm run build && npm run prepare:pages && npm run preview
+```
 
 ## Estructura del proyecto
 
