@@ -8,11 +8,11 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06b6d4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Tests](https://img.shields.io/badge/tests-31%20pasando-2ea44f?style=flat-square)
 
-![Portada](public/og/trading-academy.svg)
+![Portada](public/og/trading-academy.svg?v=2)
 
 ## Qué es LearnTrading
 
-LearnTrading es un sitio estático (SSG) pensado para quien nunca ha operado. El contenido está escrito para leerse de principio a fin, con progreso guardado en el navegador, ejemplos numéricos verificables y gráficos deterministas: el mismo lección muestra siempre la misma figura, con datos **ficticios** generados por una semilla.
+LearnTrading es un sitio estático (SSG) pensado para quien nunca ha operado. El contenido está escrito para leerse de principio a fin, con progreso guardado en el navegador, ejemplos numéricos verificables y gráficos deterministas: la misma lección muestra siempre la misma figura, con datos **ficticios** generados por una semilla.
 
 No recomienda brokers, no publica señales y no simula cuentas reales. El simulador calcula riesgo, tamaño de posición y relación riesgo/beneficio con cifras que tú introduces.
 
