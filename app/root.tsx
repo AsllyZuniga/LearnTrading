@@ -1,4 +1,5 @@
 import {
+  Link,
   Links,
   Meta,
   Outlet,
@@ -22,7 +23,7 @@ export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "icon",
-    href: "/favicon.svg",
+    href: `${import.meta.env.BASE_URL}favicon.svg`,
     type: "image/svg+xml",
   },
 ];
@@ -147,18 +148,18 @@ export function ErrorBoundary({ error }: { error: unknown }) {
         <h1 className="mt-3 text-3xl font-semibold text-ink sm:text-4xl">{title}</h1>
         <p className="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-muted">{detail}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="inline-flex h-11 items-center rounded-xl bg-brand px-5 text-sm font-medium text-brand-ink transition-colors hover:bg-brand-strong"
           >
             Volver al inicio
-          </a>
-          <a
-            href="/ruta"
+          </Link>
+          <Link
+            to="/ruta"
             className="inline-flex h-11 items-center rounded-xl border border-line-strong px-5 text-sm font-medium text-ink transition-colors hover:bg-surface-2"
           >
             Ruta de aprendizaje
-          </a>
+          </Link>
         </div>
       </Container>
     </main>
