@@ -5,6 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+  base: process.env.BASE_PATH ?? "/",
   build: {
     chunkSizeWarningLimit: 900,
   },
