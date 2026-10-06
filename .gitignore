@@ -1,0 +1,9 @@
+node_modules/
+build/
+.react-router/
+public/build/
+dist/
+*.log
+.env
+.env.*
+.DS_Store
