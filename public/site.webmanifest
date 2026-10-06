@@ -1,0 +1,17 @@
+{
+  "name": "Trading Academy",
+  "short_name": "Trading Academy",
+  "description": "Plataforma educativa para aprender trading, forex, criptomonedas y análisis técnico desde cero. Lecciones progresivas, gráficos explicativos, diccionario y simulador. Sin promesas de resultados.",
+  "lang": "es",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070a10",
+  "theme_color": "#070a10",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
