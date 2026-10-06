@@ -13,7 +13,8 @@
     "lint": "eslint . --max-warnings 0",
     "test": "vitest run",
     "test:watch": "vitest",
-    "seo:generate": "tsx scripts/generate-seo.ts"
+    "seo:generate": "tsx scripts/generate-seo.ts",
+    "prepare:pages": "tsx scripts/prepare-pages.ts"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",
