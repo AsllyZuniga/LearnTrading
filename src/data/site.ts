@@ -7,7 +7,7 @@ export const site: SiteConfig = {
   tagline: "Aprende Trading desde cero",
   description:
     "Plataforma educativa para aprender trading, forex, criptomonedas y análisis técnico desde cero. Lecciones progresivas, gráficos explicativos, diccionario y simulador. Sin promesas de resultados.",
-  url: "https://tradingacademy.example.com",
+  url: "https://asllyzuniga.github.io/LearnTrading",
   locale: "es_ES",
   language: "es",
   themeColor: { dark: "#070a10", light: "#f3f5f9" },

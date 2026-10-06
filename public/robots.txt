@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tradingacademy.example.com/sitemap.xml
+Sitemap: https://asllyzuniga.github.io/LearnTrading/sitemap.xml
