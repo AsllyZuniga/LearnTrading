@@ -41,7 +41,6 @@ export const meta: Route.MetaFunction = ({ error }) => {
     { title },
     { name: "description", content: site.description },
     ...(failed ? [{ name: "robots", content: "noindex" }] : []),
-    { name: "viewport", content: "width=device-width, initial-scale=1" },
     { property: "og:title", content: title },
     { property: "og:description", content: site.description },
     { name: "twitter:title", content: title },
@@ -69,6 +68,7 @@ export function Layout({ children }: { children: ReactNode }) {
     <html lang="es" className="dark" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="theme-color"
           content={site.themeColor.dark}
@@ -83,9 +83,9 @@ export function Layout({ children }: { children: ReactNode }) {
         {/*
           React Router reemplaza la meta de cada ruta en lugar de fusionarla, así
           que la meta de root solo se aplicaría si ninguna ruta hija declarara la
-          suya. Los datos de Open Graph comunes a todo el sitio van aquí como
-          etiquetas literales: `<Meta />` deja el title y la descripción a cargo
-          de cada ruta.
+          suya. Por eso viewport y los datos de Open Graph comunes a todo el sitio
+          van aquí como etiquetas literales: `<Meta />` deja el title y la
+          descripción a cargo de cada ruta.
         */}
         <meta property="og:site_name" content={site.name} />
         <meta property="og:locale" content={site.locale} />
